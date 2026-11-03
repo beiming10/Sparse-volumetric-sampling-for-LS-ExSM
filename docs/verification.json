@@ -1,0 +1,49 @@
+{
+  "python": "3.13.2",
+  "platform": "Linux-5.4.250-9-velinux1u2-amd64-x86_64-with-glibc2.39",
+  "torch": "2.10.0+cu129",
+  "numpy": "2.4.2",
+  "einops": "0.8.1",
+  "tifffile": "2026.6.1",
+  "device": "cuda:0",
+  "atol_adu": 1.0,
+  "rtol": 0.0,
+  "reference_environment": "PyTorch 2.0.1+cu118",
+  "tolerance_basis": "one ADU, the intensity step of the original uint16 acquisition",
+  "examples": {
+    "denoise": {
+      "input_shape": [
+        5,
+        160,
+        528
+      ],
+      "output_shape": [
+        5,
+        160,
+        528
+      ],
+      "max_absolute_error_adu": 0.2651214599609375,
+      "rmse_adu": 0.0774417445063591,
+      "passed": true
+    },
+    "isr": {
+      "input_shape": [
+        8,
+        2,
+        160,
+        528
+      ],
+      "output_shape": [
+        8,
+        4,
+        160,
+        528
+      ],
+      "max_absolute_error_adu": 0.171905517578125,
+      "rmse_adu": 0.0037339339032769203,
+      "passed": true
+    }
+  },
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "hypotonic_checkpoint_load": "passed"
+}

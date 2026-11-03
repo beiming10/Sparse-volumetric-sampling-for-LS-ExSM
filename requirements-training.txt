@@ -1,0 +1,5 @@
+-r requirements.txt
+pillow
+scipy
+h5py
+tqdm

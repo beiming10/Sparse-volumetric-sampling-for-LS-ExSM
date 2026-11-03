@@ -1,0 +1,51 @@
+{
+  "denoise": {
+    "source": "Hypertonic/AllOutput/09_movie_217Hz_0009_substack_129.tif",
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "axes": "time,y,x",
+    "role": "raw repeated-time frames"
+  },
+  "isr": {
+    "condition": "Hypertonic",
+    "movie": "09_movie_217Hz_0009",
+    "volume": 1,
+    "spectra": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "source_files": {
+      "1": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum1_vol001.tif",
+      "2": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum2_vol001.tif",
+      "3": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum3_vol001.tif",
+      "4": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum4_vol001.tif",
+      "5": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum5_vol001.tif",
+      "6": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum6_vol001.tif",
+      "7": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum7_vol001.tif",
+      "8": "Hypertonic/SpectrumStacks_99slice/09_movie_217Hz_0009/09_movie_217Hz_0009_spectrum8_vol001.tif"
+    },
+    "dense_indices": [
+      48,
+      49,
+      50,
+      51
+    ],
+    "input_indices": [
+      48,
+      51
+    ],
+    "axes": "spectral_channel,axial_plane,y,x",
+    "reference": "existing densely sampled denoised intensity"
+  }
+}

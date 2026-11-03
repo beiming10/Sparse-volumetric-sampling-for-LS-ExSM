@@ -1,0 +1,37 @@
+{
+  "denoising": {
+    "network": "factorized (2+1)D U-Net, convolutional bottleneck",
+    "feature_widths": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "parameters": 260297,
+    "clip_length": 5,
+    "spatial_downsampling_only": true,
+    "normalization": "x/250",
+    "inference": "centre frame, reflected temporal boundary",
+    "checkpoints": {
+      "Hypertonic": "models/denoise_hyper_300epoch.pth",
+      "Hypotonic": "models/denoise_hypo_300epoch.pth"
+    },
+    "selected_epoch": 300
+  },
+  "ISR": {
+    "name": "intermediate-slice reconstruction (ISR)",
+    "implementation_class": "FSR",
+    "input_planes": 2,
+    "output_planes": 4,
+    "parameters": 447818,
+    "normalization": "(x-110)/250",
+    "inference": "adjacent endpoint pairs; average shared endpoint predictions; 3*N-2 output planes",
+    "checkpoint": "models/isr_hyper_280epoch.pth",
+    "selected_epoch": 280
+  },
+  "examples": {
+    "denoising": "raw repeated-time five-frame clip",
+    "ISR": "eight aligned spectral channels, two endpoint inputs and four-plane dense denoised reference",
+    "reference_type": "densely sampled denoised intensities, not an independent noise-free biological ground truth"
+  }
+}
